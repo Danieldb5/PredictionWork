@@ -1,0 +1,10 @@
+{
+  "_doc": "Your own views. Each entry: match (slug | slug glob | slug:Outcome | token id | condition id | 'q:question text'), and any of: p + sd (your probability and prob-sd confidence), shift (bias in prob points added after fusion), lo/hi (hard bounds), ts (when formed: the view fades with age), expires, note. Views without ':Outcome' are about the first outcome (YES) and are mirrored automatically for NO. Edit by hand or: py -m FairMV view <match> --p 0.6 --sd 0.04 --expires 48h. Entries with \"disabled\": true are ignored; _examples is ignored.",
+  "views": [],
+  "_examples": [
+    {"match": "will-hexed-score-at-least-65-on-the-rotten-tomatoes-tomatometer-20261130", "p": 0.62, "sd": 0.04, "ts": "2026-11-24T18:00:00Z", "expires": "2026-11-30T00:00:00Z", "note": "early reviews strong"},
+    {"match": "*pgl-major*", "shift": -0.02, "note": "esports YES legs trade rich"},
+    {"match": "q:acquired before 2028", "lo": 0.03, "hi": 0.6},
+    {"match": "will-iran-target-iraq-by-november-30-2026-20261119:No", "p": 0.7, "sd": 0.08}
+  ]
+}

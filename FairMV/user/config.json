@@ -1,0 +1,3 @@
+{
+  "_doc": "Overrides for FVConfig (FairMV/core.py lists every key with its meaning). Only put keys you want to change, e.g. {\"trade_side_adjust\": 0.3, \"dust_notional\": 20}. Keys starting with _ are ignored."
+}

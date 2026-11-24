@@ -1,0 +1,16 @@
+{
+  "_doc": "Correlated markets. links: target (market it applies to: slug | glob | slug:Outcome | token), other (related market: slug | slug:Outcome | token), relation (same | complement | linear | move | le | ge), alpha/beta (log-odds mapping for linear/move), noise_sd (log-odds sd of the relationship = how much you trust it), margin (prob slack for le/ge). event_sums: target, event (event slug; default its own), total (1 = exactly one leg wins, K = K legs win, 'auto'), residual_sd. Neg-risk events get total=1 automatically. Or use: py -m FairMV link <target> <other> --relation move --beta 0.8",
+  "links": [],
+  "event_sums": [],
+  "_examples": {
+    "links": [
+      {"target": "will-periodic-labs-be-acquired-before-2028", "other": "will-ami-labs-be-acquired-before-2028", "relation": "move", "beta": 0.6, "noise_sd": 0.3, "_why": "same M&A climate: levels differ but news moves both"},
+      {"target": "us-diplomat-expelled-by-december-31-2026", "other": "us-diplomat-expelled-by-march-31-2027", "relation": "le", "_why": "by Dec <= by Mar"},
+      {"target": "some-thin-market", "other": "liquid-twin-on-same-event", "relation": "same", "noise_sd": 0.1},
+      {"target": "team-a-wins", "other": "team-b-wins", "relation": "complement", "noise_sd": 0.05}
+    ],
+    "event_sums": [
+      {"target": "*", "event": "pgl-major-singapore-2026-qualify-to-stage-3", "total": 8, "residual_sd": 0.03}
+    ]
+  }
+}

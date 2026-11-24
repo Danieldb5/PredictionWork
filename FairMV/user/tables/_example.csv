@@ -1,0 +1,4 @@
+key,p,sd,shift,ts,source,note
+will-hexed-score-at-least-65-on-the-rotten-tomatoes-tomatometer-20261130,0.64,0.05,,2026-11-24T17:00:00Z,rt_scraper,"12 reviews, 83% fresh"
+will-hexed-score-at-least-65-on-the-rotten-tomatoes-tomatometer-20261130,0.66,0.04,,2026-11-24T19:00:00Z,rt_scraper,"20 reviews, 85% fresh (latest row wins)"
+*bab-el-mandeb*,,,0.02,2026-11-24T12:00:00Z,shipping_bias,"my AIS count runs above the market"
